@@ -1,0 +1,17 @@
+{
+  "name": "freemarker-experiment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:plumpNation/freemarker-experiment.git",
+  "author": "Gavin King <gavin.king@acando.no>",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "3.0.2",
+    "husky": "3.0.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

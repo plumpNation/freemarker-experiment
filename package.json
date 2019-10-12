@@ -5,6 +5,9 @@
   "repository": "git@github.com:plumpNation/freemarker-experiment.git",
   "author": "Gavin King <gavin.king@acando.no>",
   "license": "MIT",
+  "scripts": {
+    "commit": "npx git-cz"
+  },
   "devDependencies": {
     "cz-conventional-changelog": "3.0.2",
     "husky": "3.0.8"

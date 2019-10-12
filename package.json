@@ -6,15 +6,24 @@
   "author": "Gavin King <gavin.king@acando.no>",
   "license": "MIT",
   "scripts": {
-    "commit": "npx git-cz"
+    "commit": "git cz",
+    "release": "standard-version"
   },
   "devDependencies": {
+    "@commitlint/cli": "8.2.0",
+    "@commitlint/config-conventional": "8.2.0",
     "cz-conventional-changelog": "3.0.2",
-    "husky": "3.0.8"
+    "husky": "3.0.8",
+    "standard-version": "7.0.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

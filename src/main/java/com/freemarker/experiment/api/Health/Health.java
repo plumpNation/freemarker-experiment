@@ -1,4 +1,4 @@
-package com.freemarker.experiment.Health;
+package com.freemarker.experiment.api.Health;
 
 public class Health {
     private final String content;

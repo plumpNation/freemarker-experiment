@@ -1,0 +1,61 @@
+$custom-color-key: 'base' !default;
+
+$custom-palette: (
+  'primary': (
+    'base': #BA3727,
+    'light': #BA3727,
+    'dark': #BA3727,
+  ),
+  'secondary': (
+    'base': #015A84,
+    'light': #015A84,
+    'dark': #015A84,
+  ),
+  'tertiary': (
+    'base': #CA9916,
+    'light': #CA9916,
+    'dark': #CA9916,
+  ),
+  'foreground': (
+    'base': #191919,
+    'light': #191919,
+    'dark': #191919,
+  ),
+  'background': (
+    'base': #e9e9e9,
+    'light': #e9e9e9,
+    'dark': #e9e9e9,
+  ),
+);
+
+$custom-opacity: (
+  'light': 0.8, // opacity used with lighter colors
+  'dark': 0.4,  // opacity used with darker colors
+  // ... etc.
+);
+
+@function custom-color(
+  $name: 'primary',
+  $variant: $custom-color-key,
+  $opacity: 1
+) {
+  $color: null;
+
+  // Get the color spectrum
+  $color-spectrum: map-get($custom-palette, $name);
+
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  // Get the alpha setting
+  $alpha: if (type-of($opacity) == 'number', $opacity, map-get($custom-opacity, $opacity));
+
+  // Set the alpha of the color
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}

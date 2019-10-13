@@ -1,0 +1,14 @@
+@import "../../../theme/colors";
+
+// Example usage
+.custom-anchor {
+  color: custom-color('primary');
+
+  &.secondary {
+    color: custom-color('secondary');
+  }
+
+  &.transparent {
+    color: custom-color('primary', $opacity: 'light');
+  }
+}

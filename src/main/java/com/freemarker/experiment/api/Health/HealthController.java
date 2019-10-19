@@ -1,15 +1,20 @@
 package com.freemarker.experiment.api.Health;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping("/api")
 public class HealthController {
 
-    @GetMapping("/health")
-    public Health health() {
+    @GetMapping(value="/health", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public @ResponseBody Health health() {
         return new Health("Hello world!");
+    }
+
+    @GetMapping(value="/health", produces = {MediaType.TEXT_HTML_VALUE})
+    public String healthHtml() {
+        return "forward:/";
     }
 }

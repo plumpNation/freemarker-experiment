@@ -6,4 +6,7 @@
 [@MainLayout title="${vm.title}"]
   <h1>Home content</h1>
   [@CallToActionButton]${vm.callToAction.text}[/@CallToActionButton]
+  <script>
+    console.log(window.location.pathname);
+  </script>
 [/@MainLayout]

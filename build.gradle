@@ -4,10 +4,22 @@ plugins {
 	id 'java'
 }
 
+defaultTasks 'build'
+
 configurations {
 	developmentOnly
 	runtimeClasspath {
 		extendsFrom developmentOnly
+	}
+}
+
+// don't add unbuilt files to the resources folder
+sourceSets {
+	main {
+		resources {
+			exclude '**/*.scss'
+			exclude '**/*.ts'
+		}
 	}
 }
 
@@ -19,10 +31,23 @@ repositories {
 	mavenCentral()
 }
 
+task webpack(type: Exec) {
+	inputs.file 'package.json'
+	inputs.file('yarn.lock')
+	inputs.file('webpack.config.js')
+	inputs.dir('src/main/resources/templates')
+
+	outputs.dir("$buildDir/static")
+
+	commandLine "$projectDir/node_modules/.bin/webpack"
+}
+
+assemble.dependsOn(webpack)
+
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web")
-	compile("org.springframework.boot:spring-boot-starter-freemarker")
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-freemarker')
+	developmentOnly('org.springframework.boot:spring-boot-devtools')
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

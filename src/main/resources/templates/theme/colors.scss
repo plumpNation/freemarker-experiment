@@ -42,18 +42,18 @@ $custom-opacity: (
   $color: null;
 
   // Get the color spectrum
-  $color-spectrum: map-get($custom-palette, $name);
+  $color-spectrum: map_get($custom-palette, $name);
 
   // Get the color variant
   @if $color-spectrum {
-    $color: map-get($color-spectrum, $variant);
+    $color: map_get($color-spectrum, $variant);
   }
 
   // Get the alpha setting
-  $alpha: if (type-of($opacity) == 'number', $opacity, map-get($custom-opacity, $opacity));
+  $alpha: if (type_of($opacity) == 'number', $opacity, map_get($custom-opacity, $opacity));
 
   // Set the alpha of the color
-  @if $alpha {
+  @if type_of($alpha) == 'number' {
     $color: rgba($color, $alpha);
   }
 

@@ -8,6 +8,7 @@
   <head>
     <meta charset="UTF-8">
       <title>${title!"Main layout"}</title>
+      <link rel="stylesheet" href="/layouts/mainLayout.css" />
   </head>
 
   <body>
@@ -16,6 +17,6 @@
 
     [#nested]
   </body>
-  <script src="/ui/MainLayoutLayout.js"></script>
+  <script src="/layouts/mainLayout.js"></script>
 </html>
 [/#macro]

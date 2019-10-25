@@ -11,6 +11,6 @@ public class HomeController {
         // Maybe standardise around the "vm" name to represent ViewModel
         model.addAttribute("vm", new HomeViewModel());
 
-        return "screens/Home/Home"; // <- name of template
+        return "screens/Home/HomeScreen"; // <- name of template
     }
 }

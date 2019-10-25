@@ -7,14 +7,26 @@
   "license": "MIT",
   "scripts": {
     "commit": "git cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development"
   },
   "devDependencies": {
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
+    "css-loader": "3.2.0",
     "cz-conventional-changelog": "3.0.2",
-    "husky": "3.0.8",
-    "standard-version": "7.0.0"
+    "husky": "3.0.9",
+    "mini-css-extract-plugin": "0.8.0",
+    "sass": "1.23.1",
+    "sass-loader": "8.0.0",
+    "source-map-loader": "0.2.4",
+    "standard-version": "7.0.0",
+    "style-loader": "1.0.0",
+    "ts-loader": "6.2.1",
+    "typescript": "3.6.4",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.9"
   },
   "config": {
     "commitizen": {

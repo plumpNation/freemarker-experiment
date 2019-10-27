@@ -23,7 +23,6 @@ sourceSets {
 	}
 }
 
-group = 'com.graalvm'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -35,9 +34,9 @@ task webpack(type: Exec) {
 	inputs.file 'package.json'
 	inputs.file('yarn.lock')
 	inputs.file('webpack.config.js')
-	inputs.dir('src/main/resources/templates')
 
-	outputs.dir("$buildDir/static")
+	inputs.dir('src/main/resources/public')
+	outputs.dir('build/resources/main/public')
 
 	commandLine "$projectDir/node_modules/.bin/webpack"
 }

@@ -2,9 +2,8 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const templates = path.resolve(__dirname, "src/main/resources/templates");
-
-const public = path.resolve(__dirname, "public");
+const public = path.resolve(__dirname, "src", "main", "resources", "public");
+const outputPath = path.resolve(__dirname, "build", "resources", "main", "public");
 
 const mode = (process.env.NODE_ENV && process.env.NODE_ENV === 'production') ? 'production' : 'development';
 
@@ -12,11 +11,11 @@ module.exports = {
     mode,
 
     entry: {
-        'layouts/mainLayout': `${templates}/layouts/Main/MainLayout.ts`,
-        'screens/homeScreen': `${templates}/screens/Home/HomeScreen.ts`,
+        'layouts/mainLayout': `${public}/layouts/Main/MainLayout.ts`,
+        'screens/homeScreen': `${public}/screens/Home/HomeScreen.ts`,
     },
     output: {
-        path: public,
+        path: outputPath,
         filename: '[name].js',
     },
     module: {

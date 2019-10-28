@@ -1,6 +1,6 @@
 [#-- @ftlvariable name="vm" type="com.freemarker.experiment.ui.layouts.MainLayoutViewModel" --]
-[#include '../../components/Errors.ftl']
-[#include '../../components/SiteHeader/SiteHeader.ftl']
+[#include '../../components/FreemarkerError/FreemarkerError.ftl']
+[#include './components/SiteHeader/SiteHeader.ftl']
 
 [#macro MainLayout title]
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 [#ftl]
 [#-- @ftlvariable name="vm" type="com.freemarker.experiment.ui.screens.Home.HomeViewModel" --]
 [#include '../../layouts/Main/MainLayout.ftl']
-[#include '../../components/CallToActionButton.ftl']
+[#include '../../components/CallToActionButton/CallToActionButton.ftl']
 
 [@MainLayout title="${vm.title}"]
   <link rel="stylesheet" href="/screens/homeScreen.css" />

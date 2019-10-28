@@ -7,7 +7,6 @@ Learning to create a freemarker based spring boot app.
 
 - nodejs
 - yarn
-- `npm i -g commitizen`
 
 ## Committing
 

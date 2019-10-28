@@ -1,3 +1,4 @@
+import org.apache.tools.ant.taskdefs.condition.Os
 plugins {
 	id 'org.springframework.boot' version '2.1.9.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
@@ -38,7 +39,11 @@ task webpack(type: Exec) {
 	inputs.dir('src/main/resources/public')
 	outputs.dir('build/resources/main/public')
 
-	commandLine "$projectDir/node_modules/.bin/webpack"
+	if(Os.isFamily(Os.FAMILY_WINDOWS)) {
+		commandLine 'cmd', '/c', 'yarn', 'build'
+	} else {
+		commandLine 'yarn', 'build'
+	}
 }
 
 assemble.dependsOn(webpack)

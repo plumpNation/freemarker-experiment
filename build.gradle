@@ -38,7 +38,7 @@ task webpack(type: Exec) {
 	inputs.dir('src/main/resources/public')
 	outputs.dir('build/resources/main/public')
 
-	commandLine "$projectDir/node_modules/.bin/webpack"
+	commandLine = [ 'yarn', 'build' ]
 }
 
 assemble.dependsOn(webpack)

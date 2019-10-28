@@ -1,4 +1,23 @@
+$iconSize: (
+  xs: 2rem,
+  s: 2.5rem,
+  m: 3rem,
+  l: 4rem,
+  xl: 5rem,
+  xxl: 7rem,
+) !default;
+
 .custom-icon-button {
   background: none;
   border: 0;
+  line-height: 0;
+  padding: .25rem;
+  position: relative;
+  height: map-get($iconSize, m);
+  width: map-get($iconSize, m);
+
+  .custom-icon {
+    height: 100%;
+    width: 100%;
+  }
 }

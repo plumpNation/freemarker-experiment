@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="/layouts/mainLayout.css" />
   </head>
 
-  <body>
+  <body class="main-layout">
     [@SiteHeader links=vm.mainMenu.links /]
     [@Errors /]
 

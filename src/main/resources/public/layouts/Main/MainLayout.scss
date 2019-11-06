@@ -1,3 +1,8 @@
-body.main-layout {
-  margin: 0;
-}
+@import "../../theme/grid-base/placeholder";
+
+  body.main-layout {
+    width: 75%;
+    padding: 0% 0% 15% 15%;
+  }
+
+

@@ -1,9 +1,22 @@
+@import "../../../../theme/grid-base/placeholder";
 .main-layout {
   .custom-site-header {
-    background: pink;
-
+    @extend %row;
+    background-color: darkgray;
+    color: blue;
     border: 1px solid grey;
+    padding: $gutter;
 
-    display: flex;
+    .custom-header-link{
+      @include col(3);
+    }
+    .custom-header-menu-button{
+      @include col(3);
+      text-align: end;
+    }
+    .custom-header-search {
+      @include col(6);
+      text-align: end;
+    }
   }
 }

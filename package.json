@@ -37,5 +37,10 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "@drewbot/sass-flexbox-grid": "2.0.7",
+    "file-loader": "4.2.0",
+    "url-loader": "2.2.0"
   }
 }

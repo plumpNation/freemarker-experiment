@@ -1,5 +1,88 @@
-$blue: blue;
+@import "../../theme/grid-base/placeholder";
 
-body {
-  color: $blue;
+.main-layout{
+
+    .custom-main-content {
+      @include row();
+      padding: $gutter;
+      background-color: black;
+      margin-top:$gutter;
+
+      .custom-hero-container {
+        @include col(12);
+        font-size: 30px;
+        color: white;
+        text-align: center;
+      }
+    }
+
+    @media only screen and (max-width: 768px){
+      .custom-news-container{
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .custom-first-news {
+          margin-bottom: $gutter;
+        }
+        .custom-second-news {
+          margin-bottom: $gutter;
+        }
+        .custom-third-news {
+          margin-bottom: $gutter;
+        }
+        .custom-fourth-news {
+          margin-bottom: $gutter;
+        }
+      }
+      .custom-article-container {
+        flex-direction: column;
+      }
+
+   }
+    .custom-news-container {
+      @extend %row;
+      padding: $gutter;
+      background-color: lightpink;
+      margin-top:$gutter;
+
+      .custom-first-news {
+        @extend %col3;
+        background-color: lavenderblush;
+        max-width: 23%;
+      }
+      .custom-second-news {
+        @extend %col3;
+        background-color: lightgray;
+        max-width: 23%;
+      }
+      .custom-third-news {
+        @extend %col3;
+        background-color: lavenderblush;
+        max-width: 23%;
+      }
+      .custom-fourth-news {
+        @extend %col3;
+        background-color: lightgray;
+        max-width: 23%;
+      }
+    }
+
+    .custom-article-container {
+      @extend %row;
+      background-color: darkgray;
+      padding: $gutter;
+      margin-top:$gutter;
+
+      .custom-article-content {
+        @include col(9);
+      }
+      .custom-article-image {
+        @extend %col3;
+        .custom-image{
+          @extend %image;
+        }
+
+      }
+    }
+
 }

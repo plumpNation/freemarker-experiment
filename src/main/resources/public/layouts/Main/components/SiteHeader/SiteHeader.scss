@@ -1,22 +1,44 @@
 @import "../../../../theme/grid-base/placeholder";
-.main-layout {
-  .custom-site-header {
-    @extend %row;
-    background-color: darkgray;
-    color: blue;
-    border: 1px solid grey;
-    padding: $gutter;
 
-    .custom-header-link{
-      @include col(3);
+.main-layout {
+  .custom-header-wrapper{
+    background: white;
+  }
+  .custom-site-header {
+    background: darkgray;
+    border: 1px solid grey;
+    @extend %row;
+    .custom-header-link {
+      @include col("xs", 4);
+      @include first("sm");
     }
-    .custom-header-menu-button{
-      @include col(3);
-      text-align: end;
+    .custom-header-menu-button {
+      @include col("xs", 4);
+      @include first("xs");
+      position: relative;
+      @include start("xs");
+      @include center("sm");
+    }
+    .custom-menu-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      ul {
+        list-style-type: none;
+        text-align: initial;
+      }
+    }
+    .custom-header-menu-button:hover .custom-menu-content {
+      display: block;
     }
     .custom-header-search {
-      @include col(6);
+      @include col("xs", 4);
       text-align: end;
     }
   }
 }
+
+

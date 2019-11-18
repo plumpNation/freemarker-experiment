@@ -11,10 +11,9 @@
       <title>${title!"Main layout"}</title>
       <link rel="stylesheet" href="/layouts/mainLayout.css" />
   </head>
-
   <body class="main-layout">
-      [@SiteHeader links=vm.mainMenu.links /]
-      [@Errors /]
+    [@SiteHeader links=vm.mainMenu.links /]
+    [@Errors /]
     [#nested]
   </body>
   <script src="/layouts/mainLayout.js"></script>

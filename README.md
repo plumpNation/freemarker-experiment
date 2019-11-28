@@ -20,4 +20,10 @@ I've left my settings in the root folder in an image called intellij-debug-confi
 
 ## Development
 
-If you only change 
+```
+./gradlew bootRun
+```
+
+or start the application in your IDE. See configuration details above.
+
+Site should launch at http://localhost:8080

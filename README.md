@@ -27,3 +27,5 @@ I've left my settings in the root folder in an image called intellij-debug-confi
 or start the application in your IDE. See configuration details above.
 
 Site should launch at http://localhost:8080
+
+Look in the `package.json` file for frontend build scripts.

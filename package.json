@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "main": "index.js",
   "repository": "git@github.com:plumpNation/freemarker-experiment.git",
-  "author": "Gavin King <gavin.king@acando.no>",
+  "author": "Gavin King <plumpnation@gmail.com>",
   "license": "MIT",
   "scripts": {
     "commit": "git cz",

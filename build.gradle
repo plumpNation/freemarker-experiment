@@ -41,7 +41,7 @@ task webpack(type: Exec) {
 	commandLine = [ 'yarn', 'build' ]
 }
 
-assemble.dependsOn(webpack)
+processResources.dependsOn(webpack)
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')

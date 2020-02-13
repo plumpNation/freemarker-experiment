@@ -17,6 +17,12 @@
       "@babel/preset-typescript"
     ]
   },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@babel/core": "7.8.4",
     "@babel/preset-env": "7.8.4",

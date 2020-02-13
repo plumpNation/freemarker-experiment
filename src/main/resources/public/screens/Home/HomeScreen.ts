@@ -1,3 +1,5 @@
 import './HomeScreen.scss';
 
-console.log('I am the home screen');
+const content: string = 'I am the home screen';
+
+console.log(content);

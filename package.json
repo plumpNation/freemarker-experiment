@@ -11,9 +11,19 @@
     "build": "webpack --mode production",
     "dev": "webpack --watch --mode development"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ]
+  },
   "devDependencies": {
+    "@babel/core": "7.8.4",
+    "@babel/preset-env": "7.8.4",
+    "@babel/preset-typescript": "7.8.3",
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
+    "babel-loader": "8.0.6",
     "commitizen": "4.0.3",
     "css-loader": "3.2.0",
     "cz-conventional-changelog": "3.0.2",

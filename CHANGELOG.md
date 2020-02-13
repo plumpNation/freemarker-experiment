@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/plumpNation/freemarker-experiment/compare/v2.0.0...v2.1.0) (2020-02-13)
+
+
+### Features
+
+* **package.json:** should support IE11 ([6d78645](https://github.com/plumpNation/freemarker-experiment/commit/6d78645565927fd28c5c7196b32f451a9c49827f))
+
 ## 2.0.0 (2020-02-13)
 
 
